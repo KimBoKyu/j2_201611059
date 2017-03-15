@@ -1,0 +1,12 @@
+class Turtle {
+    +bk()
+    +fd()
+    +left()
+    +right()
+    +penUp()
+    +penDown()
+}
+class WeightTurtle {
+  #weight:int
+  +getWeight():int
+}
