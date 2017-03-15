@@ -1,0 +1,5 @@
+client -> WeightTurlte:new():wt
+client -> PrintStream:println()
+client -> WeightTurtle:addStatusBar(30)
+client -> String:new("Hello..."):msg
+client -> WeightTurtle:setStatusText(msg)
