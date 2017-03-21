@@ -1,0 +1,12 @@
+class Duck{
+    -FlyBehavior
+    -QuackBehavior
+}
+Interface FlyBehavior
+Interface QuackBehavior
+class FlyRocketPowered 
+class FlyWithWings 
+FlyBehavior <|.. FlyRocketPowered 
+FlyBehavior <|.. FlyWithWings
+Duck -> FlyBehavior
+Duck -> QuackBehavior
