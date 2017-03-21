@@ -1,0 +1,16 @@
+class Strategy1{
+}
+class Strategyn{
+}
+Interface Strategy{
+    excute()
+}
+Strategy <|.. Strategy1
+Strategy <|.. Strategyn
+
+class Context {
+    -Strategy:s
+    +setStrategy(s:Strategy):void
+    +excuteStrategy()
+}
+Context -> Strategy
