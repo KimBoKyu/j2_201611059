@@ -1,0 +1,26 @@
+class Duck{
+    -quackBehavior:QuackBehavior
+    +setQuackBehavior(QuackBehavior:q)
+    +performQuack()
+    -flyBehavior:FlyBehavior
+    +setFlyBehavior(FlyBehavior:f)
+    +performFly()
+}
+class ModelDuck
+class MallarDuck
+Duck <|-- ModelDuck
+Duck <|--MallarDuck
+interface QuackBehavior{
+    +quack()
+}
+interface FlyBehavior{
+    +fly()
+}
+Duck -> FlyBehavior
+Duck -> QuackBehavior
+class Quack
+QuackBehavior <|..Quack
+class FlyRocketPowered
+class FlyWithWings
+FlyBehavior <|.. FlyRocketPowered
+FlyBehavior <|.. FlyWithWings
