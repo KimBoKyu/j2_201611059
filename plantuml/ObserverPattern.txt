@@ -1,0 +1,11 @@
+interface IObserver{
+    update(o:Observable, arg:Object)
+}
+interface IObservable {
+    +addObserver(o:Observer):void
+    +removeObserver(o:Observer):void
+    +notifyObservers(org:Object):void
+}
+IObserver<-right-IObservable
+IObservable <|.. WeatherData
+IObserver <|.. BroadscatingCompanyDisplay
