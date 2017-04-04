@@ -3,120 +3,152 @@
   <project autorefresh="false" build="classes/" root="" work="">
     <createjar file=""/>
     <source>
-      <file active="true" name="src/com/sd/gui/CalcAreaGUIMain.java" package="com.sd.gui" timestamp="29-Mar-2017 14:47:33">
-        <select from="319" to="319"/>
+      <file active="true" name="src/headfirst/strategy/weather/ForecastDisplay.java" package="headfirst.strategy.weather" timestamp="04-Apr-2017 14:25:33">
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v2/TurtleComparator.java" package="com.sd.sort.v2" timestamp="28-Mar-2017 15:22:19">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/headfirst/strategy/Duck.java" package="headfirst.strategy" timestamp="22-Mar-2017 18:57:09">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/headfirst/strategy/FlyBehavior.java" package="headfirst.strategy" timestamp="22-Mar-2017 18:56:30">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/turtle/WeightTurtle.java" package="com.sd.turtle" timestamp="14-Mar-2017 13:23:20">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/Hello.java" package="" timestamp="08-Mar-2017 14:40:31">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/turtle/WeightTurtleMain.java" package="com.sd.turtle" timestamp="15-Mar-2017 14:22:42">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/headfirst/strategy/FlyWithWings.java" package="headfirst.strategy" timestamp="22-Mar-2017 14:26:44">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/headfirst/strategy/QuackBehavior.java" package="headfirst.strategy" timestamp="22-Mar-2017 18:56:49">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/headfirst/strategy/MiniDuckSimulator1.java" package="headfirst.strategy" timestamp="22-Mar-2017 18:57:30">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/headfirst/strategy/MallardDuck.java" package="headfirst.strategy" timestamp="22-Mar-2017 18:57:43">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/headfirst/strategy/ModelDuck.java" package="headfirst.strategy" timestamp="22-Mar-2017 18:57:52">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/headfirst/strategy/Quack.java" package="headfirst.strategy" timestamp="22-Mar-2017 19:07:19">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/headfirst/strategy/FlyNoWay.java" package="headfirst.strategy" timestamp="22-Mar-2017 14:49:12">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/headfirst/strategy/FlyRocketPowered.java" package="headfirst.strategy" timestamp="22-Mar-2017 14:52:37">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v0/St_sort.java" package="com.sd.sort.v0" timestamp="28-Mar-2017 14:35:17">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v0/In_sort.java" package="com.sd.sort.v0" timestamp="28-Mar-2017 14:38:27">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v1/In_sort.java" package="com.sd.sort.v1" timestamp="28-Mar-2017 14:41:01">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v1/St_sort.java" package="com.sd.sort.v1" timestamp="28-Mar-2017 14:42:13">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v1/In_sortA.java" package="com.sd.sort.v1" timestamp="28-Mar-2017 14:45:18">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v1/Weight.java" package="com.sd.sort.v1" timestamp="28-Mar-2017 14:46:27">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v1/WeightSorterMainV1.java" package="com.sd.sort.v1" timestamp="28-Mar-2017 14:48:35">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v2/IntegerComparator.java" package="com.sd.sort.v2" timestamp="28-Mar-2017 13:40:15">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v2/Sorter.java" package="com.sd.sort.v2" timestamp="28-Mar-2017 15:20:53">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v2/Comparator.java" package="com.sd.sort.v2" timestamp="28-Mar-2017 15:21:08">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v2/StringComparator.java" package="com.sd.sort.v2" timestamp="28-Mar-2017 15:22:01">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v2/SorterMainV2.java" package="com.sd.sort.v2" timestamp="28-Mar-2017 15:22:56">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
       <file name="src/com/sd/sort/v1/WeightTurtleComparable.java" package="com.sd.sort.v1" timestamp="29-Mar-2017 13:25:20">
-        <select from="319" to="319"/>
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
-      <file name="src/com/sd/gui/CalcAreaListener.java" package="com.sd.gui" timestamp="29-Mar-2017 14:38:33">
-        <select from="319" to="319"/>
+      <file name="src/com/sd/gui/CalcAreaGUIMain.java" package="com.sd.gui" timestamp="04-Apr-2017 13:20:14">
+        <select from="50" to="65"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="src/com/sd/gui/CalcAreaListener.java" package="com.sd.gui" timestamp="04-Apr-2017 13:20:39">
+        <select from="50" to="65"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="src/headfirst/strategy/weather/Observer.java" package="headfirst.strategy.weather" timestamp="04-Apr-2017 13:20:47">
+        <select from="50" to="65"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="src/headfirst/strategy/weather/Subject.java" package="headfirst.strategy.weather" timestamp="04-Apr-2017 13:33:25">
+        <select from="50" to="65"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="src/headfirst/strategy/weather/DisplayElement.java" package="headfirst.strategy.weather" timestamp="04-Apr-2017 13:50:46">
+        <select from="50" to="65"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="src/headfirst/strategy/weather/StatisticsDisplay.java" package="headfirst.strategy.weather" timestamp="04-Apr-2017 14:25:26">
+        <select from="50" to="65"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="src/headfirst/strategy/weather/CurrentConditionsDisplay.java" package="headfirst.strategy.weather" timestamp="04-Apr-2017 14:25:39">
+        <select from="50" to="65"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="src/headfirst/strategy/weather/WeatherData.java" package="headfirst.strategy.weather" timestamp="04-Apr-2017 14:26:43">
+        <select from="50" to="65"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="src/headfirst/strategy/weather/WeatherStation.java" package="headfirst.strategy.weather" timestamp="04-Apr-2017 14:27:03">
+        <select from="50" to="65"/>
         <scroll column="0" row="0"/>
       </file>
     </source>
