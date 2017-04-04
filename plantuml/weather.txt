@@ -1,0 +1,36 @@
+interface Subject{
+    +registerObserver(o:Observer):void
+    +removeObserver(o:Observer):void
+    +notifyObserver():void
+}
+
+interface Observer{
+    +update(temp:float,humid:float,pressure:float):void
+}
+
+Subject <|.. WeatherData
+Observer <|.. CurrentConditionsDisplay
+Observer <|.. ForecastDisplay
+Observer <|.. StatisticsDisplay
+
+CurrentConditionsDisplay -left-> WeatherData
+Subject .right.> Observer
+interface DisplayElement{
+    +display():void
+}
+DisplayElement <|.. CurrentConditionsDisplay
+DisplayElement <|.. ForecastDisplay
+DisplayElement <|.. StatisticsDisplay
+
+class CurrentConditionsDisplay{
+    +update()
+    +display()
+}
+class ForecastDisplay{
+    +update()
+    +display()
+}
+class StatisticsDisplay{
+    +update()
+    +display()
+}
