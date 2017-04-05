@@ -1,0 +1,29 @@
+interface java.util.Observer{
+    update(o:Observable,arg:Object)
+}
+java.util.Observer <-left-> java.util.Observable
+
+class java.util.Observable{
+    addObserver(o:Observer):void
+    deleteObserver(o:Observer):void
+}
+class MomTurtle
+java.util.Observer <|.. MomTurtle
+class BabyTurtle{
+    t:Turtle
+}
+java.util.Observable <|-- BabyTurtle
+Turtle <|-- MomTurtle
+Turtle <-- BabyTurtle
+
+class Turtle{
+    bk(distance:double):Turtle
+    fd(distance:double):Turtle
+    left(degrees:double):Turtle
+    right(degrees:double):Turtle
+    penUp():Turtle
+    penDown():Turtle
+    getPos():java.awt.geom.Point2D.Double
+    moveTo(x:double, y:double):Turtle
+    moveTo(pt:java.awt.geom.Point2D.Double):Turtle
+}
