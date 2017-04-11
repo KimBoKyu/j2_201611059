@@ -1,0 +1,8 @@
+class Component
+class ConcreteComponent
+Component <|-- ConcreteComponent
+class Decorator
+Component <|-- Decorator
+Decorator *--> Component
+class ConcreteDecorator
+Decorator <|-- ConcreteDecorator
