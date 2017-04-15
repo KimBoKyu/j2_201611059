@@ -1,0 +1,12 @@
+class InputStream {
+  +abstract read():int
+}
+InputStream <|-- FileInputStream
+InputStream <|-- ByteArrayInputStream
+InputStream <|-- StringBufferInputStream
+InputStream <|-- FilterInputStream
+FilterInputStream *-- InputStream
+FilterInputStream <|-- LineNumberInputStream
+FilterInputStream <|-- PushbackInputStream
+FilterInputStream <|-- BufferedInputStream
+FilterInputStream <|-- DataInputStream
