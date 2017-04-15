@@ -1,0 +1,14 @@
+class Reader {
+  +abstract read():int
+}
+Reader <|-- InputStreamReader
+Reader <|-- CharArrayReader
+Reader <|-- StringReader
+Reader <|-- PipeReader
+Reader <|-- FilterReader
+Reader <|-- BufferedReader
+InputStreamReader <|-- FileReader
+FilterReader <|-- PushbackReader
+BufferedReader <|-- LineNumberReader
+BufferedReader *-- Reader
+InputStreamReader *-up- InputStream
