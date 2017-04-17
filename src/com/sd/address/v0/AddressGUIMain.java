@@ -3,9 +3,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
   
-public class AddressGUIMain implements ActionListener{
+public class AddressGUIMain implements ActionListener, Display{
   AddressBody adb = new AddressBody();
-  AddressDataDisplay did;
+  AddressData did;
   String my_name;
   String my_number;
   String my_birth;
@@ -29,7 +29,7 @@ public class AddressGUIMain implements ActionListener{
     JLabel label4 = new JLabel("메모",JLabel.CENTER);
     JButton b1 = new JButton("등록");
     JButton b2 = new JButton("삭제");
-    JButton b3 = new JButton("전체 출력(입력순)");
+    JButton b3 = new JButton("최근 등록 정보");
     JButton b4 = new JButton("전체 출력(이름순)");
     b1.addActionListener(this);
     b2.addActionListener(this);
@@ -51,27 +51,41 @@ public class AddressGUIMain implements ActionListener{
     f.setVisible(true);
     f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   }
+  
   public String getName(String my_name){
     my_name = name.getText();
     return my_name;
   }
+  
   public String getNumber(String my_number){
     my_number = number.getText();
     return my_number;
   }
+  
   public String getBirth(String my_birth){
     my_birth = birth.getText();
     return my_birth;
   }
+  
   public String getMemo(String my_memo){
     my_memo = memo.getText();
     return my_memo;
   }
+  
+  public void display(){
+    if(adb.observers.size() > 0){
+      System.out.println("이름 : "+my_name+" 번호 : "+my_number+" 생일 : "+my_birth+" 메모 : "+my_memo);
+    }
+    else{
+      System.out.println("등록된 정보가 없습니다");
+    }
+  }
+  
   public void actionPerformed(ActionEvent e) {
     JButton b=(JButton)e.getSource();
     String cmd=e.getActionCommand();
       if (cmd.equals("등록")) {
-          AddressDataDisplay did = new AddressDataDisplay(adb);
+          AddressData did = new AddressData(adb);
           my_name = getName(my_name);
           my_number = getNumber(my_number);
           my_birth = getBirth(my_birth);
@@ -84,7 +98,10 @@ public class AddressGUIMain implements ActionListener{
           System.out.println("등록 했습니다.");
       } else if (cmd.equals("삭제")) {
           adb.removeObserver(did);
-      } else {
+      } else if(cmd.equals("최근 등록 정보")){
+          display();
+      } 
+      else {
           adb.display();
       }
   }

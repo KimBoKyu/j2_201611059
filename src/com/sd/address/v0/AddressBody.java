@@ -12,9 +12,12 @@ public class AddressBody implements Observable, Display {
   }
   public void removeObserver(Observer o){
     int l = observers.size();
-    System.out.println("최근 등록된 이름 : " + name +" 번호 : " +  number  + " 생일 : " +  birth  + " 메 : " +  memo + " 를 삭제했습니다.");
     if(l>0){
      observers.remove(l-1); 
+     System.out.println("최근 등록된 이름 : " + name +" 번호 : " +  number  + " 생일 : " +  birth  + " 메 : " +  memo + " 를 삭제했습니다.");
+    }
+    else{
+     System.out.println("등록된 정보가 없습니다.");
     }
   }
   public void dataChanged(){
@@ -33,7 +36,9 @@ public class AddressBody implements Observable, Display {
     }
     else{
       for(int i=0; i<observers.size(); i++){
-        System.out.println(observers);
+        Observer ob = (Observer)observers.get(i);
+        System.out.println("이름 : " + ob.getName(name) + " 번호 : " + ob.getNumber(number) + 
+                           " 생일 : " + ob.getBirth(birth) + " 메모 : " + ob.getMemo(memo));
       }
     }
   }
