@@ -1,7 +1,7 @@
 package com.sd.address.v0;
 import java.util.ArrayList;
 
-public class AddressBody implements Observable, Display {
+public class AddressBody implements Observable{
   public ArrayList<Observer> observers = new ArrayList<Observer>();
   private String name;
   private String number;
@@ -26,18 +26,6 @@ public class AddressBody implements Observable, Display {
     int i = observers.size() - 1;
     Observer observer = (Observer)observers.get(i);
     observer.update(name, number, birth, memo);      
-  }
-  
-  public void display(){
-    if(observers.size() == 0){
-      System.out.println("등록된 정보가 없습니다");
-    }
-    else{
-      int i = observers.size()-1;
-      AddressData ob = (AddressData)observers.get(i);
-      System.out.println("이름 : " + ob.getName(name) + " 번호 : " + ob.getNumber(number) + 
-                           " 생일 : " + ob.getBirth(birth) + " 메모 : " + ob.getMemo(memo));
-    }
   }
   
   public void setdatas(String name, String number, String birth, String memo) {
