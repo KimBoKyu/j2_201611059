@@ -4,12 +4,23 @@ import java.awt.*;
 import java.awt.event.*;
   
 public class AddressGUIMain implements ActionListener, Display{
-  AddressBody adb = new AddressBody();
-  AddressData did;
+  AddressBody address = new AddressBody();
+  AddressData people1 = new AddressData();
+  AddressData people2 = new AddressData();
+  AddressData people3 = new AddressData();
+  AddressData people4 = new AddressData();
+  AddressData people5 = new AddressData();
+  AddressData people6 = new AddressData();
+  AddressData people7 = new AddressData();
+  AddressData people8 = new AddressData();
+  AddressData people9 = new AddressData();
+  AddressData people10 = new AddressData();
+  public AddressData[] peoples = {people1, people2, people3, people4, people5, people6, people7, people8, people9, people10};
   String my_name;
   String my_number;
   String my_birth;
   String my_memo;
+  int i = 0;
   JTextField name = new JTextField(5);
   JTextField number = new JTextField(5);
   JTextField birth = new JTextField(5);
@@ -73,8 +84,12 @@ public class AddressGUIMain implements ActionListener, Display{
   }
   
   public void display(){
-    if(adb.observers.size() > 0){
-      System.out.println("이름 : "+my_name+" 번호 : "+my_number+" 생일 : "+my_birth+" 메모 : "+my_memo);
+    if(address.observers.size() > 0){
+        //System.out.println("이름 : "+my_name+" 번호 : "+my_number+" 생일 : "+my_birth+" 메모 : "+my_memo);
+      for(int j=0; j < i; j++){
+        System.out.println((j+1)+ " " + "이름 : " + peoples[j].name + " 번호 : " + peoples[j].number + 
+                         " 생일 : " + peoples[j].birth + " 메모 : " + peoples[j].memo);
+      }
     }
     else{
       System.out.println("등록된 정보가 없습니다");
@@ -85,24 +100,33 @@ public class AddressGUIMain implements ActionListener, Display{
     JButton b=(JButton)e.getSource();
     String cmd=e.getActionCommand();
       if (cmd.equals("등록")) {
-          AddressData did = new AddressData(adb);
           my_name = getName(my_name);
-          my_number = getNumber(my_number);
-          my_birth = getBirth(my_birth);
-          my_memo = getMemo(my_memo);
-          adb.setdatas(my_name,my_number,my_birth,my_memo);
-          name.setText("");
-          number.setText("");
-          birth.setText("");
-          memo.setText("");
-          System.out.println("등록 했습니다.");
+          if(my_name.equals("")){
+            System.out.println("이름은 필수적으로 적어야 합니다");
+          }
+          else{
+            address.registerObserver(peoples[i]);
+            my_number = getNumber(my_number);
+            my_birth = getBirth(my_birth);
+            my_memo = getMemo(my_memo);
+            address.setdatas(my_name,my_number,my_birth,my_memo);
+            name.setText("");
+            number.setText("");
+            birth.setText("");
+            memo.setText("");
+            System.out.println("등록 했습니다.");
+            i++;
+          }
       } else if (cmd.equals("삭제")) {
-          adb.removeObserver(did);
+        if(i>0){
+          address.removeObserver(peoples[i-1]);
+          i--;
+        }
       } else if(cmd.equals("최근 등록 정보")){
-          display();
+          address.display();
       } 
       else {
-          adb.display();
+          display();
       }
   }
   public static void main(String[] args){

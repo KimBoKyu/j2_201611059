@@ -7,14 +7,13 @@ public class AddressBody implements Observable, Display {
   private String number;
   private String birth;
   private String memo;
- public void registerObserver(Observer o){
+  public void registerObserver(Observer o){
     observers.add(o);
   }
   public void removeObserver(Observer o){
     int l = observers.size();
     if(l>0){
      observers.remove(l-1); 
-     System.out.println("최근 등록된 이름 : " + name +" 번호 : " +  number  + " 생일 : " +  birth  + " 메 : " +  memo + " 를 삭제했습니다.");
     }
     else{
      System.out.println("등록된 정보가 없습니다.");
@@ -24,10 +23,9 @@ public class AddressBody implements Observable, Display {
    notifyObservers();
   }
   public void notifyObservers(){
-    for(int i=0; i<observers.size(); i++){
-      Observer observer = (Observer)observers.get(i);
-      observer.update(name, number, birth, memo);      
-    }
+    int i = observers.size() - 1;
+    Observer observer = (Observer)observers.get(i);
+    observer.update(name, number, birth, memo);      
   }
   
   public void display(){
@@ -35,11 +33,10 @@ public class AddressBody implements Observable, Display {
       System.out.println("등록된 정보가 없습니다");
     }
     else{
-      for(int i=0; i<observers.size(); i++){
-        Observer ob = (Observer)observers.get(i);
-        System.out.println("이름 : " + ob.getName(name) + " 번호 : " + ob.getNumber(number) + 
+      int i = observers.size()-1;
+      AddressData ob = (AddressData)observers.get(i);
+      System.out.println("이름 : " + ob.getName(name) + " 번호 : " + ob.getNumber(number) + 
                            " 생일 : " + ob.getBirth(birth) + " 메모 : " + ob.getMemo(memo));
-      }
     }
   }
   

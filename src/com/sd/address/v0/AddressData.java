@@ -2,15 +2,9 @@ package com.sd.address.v0;
 
 public class AddressData implements Observer{
   public String name;
-  private String number;
-  private String birth;
-  private String memo;
-  
-  public Observable addressbody;
-  public AddressData(Observable addressbody){
-    this.addressbody = addressbody;
-    addressbody.registerObserver(this);
-  }
+  public String number;
+  public String birth;
+  public String memo;
   
   public String getName(String name){
     return name;
