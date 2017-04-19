@@ -1,0 +1,17 @@
+class Pizza
+Pizza <|-- CheesePizzd
+Pizza <|-- VeggiePizza
+
+class SimplePizzaFactory{
+  +createPizza(type:String):Pizza
+}
+
+SimplePizzaFactory -> Pizza
+class PizzaStore{
+  -factory:SimplePizzaFactory
+  +PizzaFactory(f:SimplePizzaFactory)
+  +orderPizza(type:String):Pizza
+}
+PizzaStore -> SimplePizzaFactory
+
+Client -> PizzaStore
