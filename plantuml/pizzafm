@@ -1,0 +1,35 @@
+class PizzaStore{
+    -{abstract}createPizza(String):pizza
+    +orderPizza(string):pizza
+}
+
+note left of PizzaStore
+    public Pizza orderPizza(String type) {
+    Pizza pizza;
+    pizza=createPizza(type);
+    pizza.prepare();
+    pizza.bake();
+    pizza.cut();
+    pizza.box();
+    return pizza;
+end note
+
+PizzaStore <|-- ChicagoPizzaStore
+PizzaStore <|-- NYPizzaStore
+
+note left of ChicagoPizzaStore
+    <b>factory method</b>
+    Pizza createPizza(String type) {
+        Pizza pizza=null;
+        if(type.equals("cheese"))
+            pizza=new ChicagoStyleCheesePizza();
+        .....
+        return pizza
+    }
+end note
+
+Pizza <|-- ChicagoStyle\nPizza
+Pizza <|-- NYStyle\nCheesePizza
+ChicagoStyle\nPizza <|-- ChicagoStyle\nCheesePizza
+
+PizzaStore ..right> Pizza
