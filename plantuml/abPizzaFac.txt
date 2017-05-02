@@ -1,0 +1,53 @@
+interface PizzaIngredientFactory{
+    +crateDough():Dough
+    +createCheese():Cheese
+}
+class ChicagoPizza\nIngredient
+class NYPizza\nIngredient
+PizzaIngredientFactory <|..ChicagoPizza\nIngredient
+PizzaIngredientFactory <|..NYPizza\nIngredient
+interface Dough
+class ThinDough
+class ThickDough
+Dough <|.. ThickDough
+Dough <|.. ThinDough
+interface Cheese
+class MozzarallaCheese
+class ReggianoCheese
+Cheese <|.. ReggianoCheese
+Cheese <|.. MozzarallaCheese
+ChicagoPizza\nIngredient ..> Dough
+ChicagoPizza\nIngredient ..> Cheese
+NYPizza\nIngredient ..> Dough
+NYPizza\nIngredient ..> Cheese
+
+abstract class Pizza {
+    String name; 
+    Dough dough;
+    Cheese cheese;
+    {abstract}prepare():void
+    bake():void
+    cut():void
+    box():void
+    setName(String name):void
+    getName():String
+    +toString():String
+}
+class CheesePizza{
+    inFactory:PizzaIngredientFactory 
+    +CheesePizza(PizzaIngredientFactory)
+    prepare():void
+}
+Pizza <|-- CheesePizza
+CheesePizza --> PizzaIngredientFactory
+
+abstract class PizzaStore{
+    +{abstract}createPizza(String type):Pizza
+    +orderPizza(String type):Pizza
+}
+class ChicagoPizzaStore
+class NYPizzaStore
+PizzaStore <|-- ChicagoPizzaStore
+PizzaStore <|-- NYPizzaStore
+ChicagoPizzaStore ..> PizzaIngredientFactory
+NYPizzaStore ..> PizzaIngredientFactory
