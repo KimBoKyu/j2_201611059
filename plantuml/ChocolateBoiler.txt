@@ -1,0 +1,8 @@
+class ChocolateBoiler{
+    -static Instance ChocolateBoller
+    -ChocolateBoller():void
+    +static getInstance():ChocolateBoller
+    +fill()
+    +boil()
+    +drain()
+}
