@@ -1,0 +1,26 @@
+class Receiver{
+    on()
+}
+
+client --> Receiver:[1] r = new()
+client --> ConcreateCommand:[2] new(r)
+
+interface Command{
+    excute()
+    undo()
+}
+class ConcreateCommand{
+    r:Recever
+    excute()
+    undo()
+}
+Command <|.. ConcreateCommand
+ConcreateCommand --> Receiver
+
+class Remocon{
+    setCommand()
+    buttonPressed()
+}
+client --> Remocon:[3] setCommand()
+client --> Remocon:[4] buttonPressed()
+Remocon --> Command:[5] excute()
