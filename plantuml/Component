@@ -1,0 +1,36 @@
+class Component
+class Leaf
+class Composite
+Composite o--> Component : Composite can have Composite, Leaf
+Component <|-- Composite
+Component <|-- Leaf
+Interface Iterator {
+    hasNext():boolean
+    next():Object
+}
+Iterator <|.. DinerMenuIterator
+Iterator <|.. PancakeHouseMenuIterator
+Composite ..> CompositeIterator
+Iterator <|.. CompositeIterator
+class DinerMenu{
+    items:MenuItem[]
+    createIterator():Iterator
+}
+class DinerMenuIterator {
+    -items:MenuItem[]
+    -position:int
+    DinerMenuIterator(MenuItem[])
+    hasNext():boolean
+    next():Object
+}
+DinerMenu ..> DinerMenuIterator
+class PancakeHouseMenu{
+    items:ArrayList<MenuItem>
+    createIterator():Iterator
+}
+class PancakeHouseMenuIterator{
+    -items:ArrayList<MenuItem>
+    hasNext():boolean
+    next():Object
+}
+PancakeHouseMenu ..> PancakeHouseMenuIterator
